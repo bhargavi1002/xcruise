@@ -1,0 +1,369 @@
+/* ------------------------------------------------------------global-------------------------------------------------------- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+h1,h2,h3,h4{
+    font-family: open sans, Helvetica, Robota, Arial, sans-serif;
+}
+
+button:hover{
+    background-color: #000000;
+    color:#fff;
+    cursor:pointer;
+}
+
+.pills, .discover_banner, .card{
+    cursor:pointer;
+}
+/*---------------------------------------------------------- navigation-------------------------------------------------------------------- */
+.navbar{
+    background-color: rgb(0, 0, 51);   
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:10px 20px;
+}
+
+.navbar img {
+    height :60px;
+    cursor: pointer;
+}
+
+.navbar .menu a {
+    margin-left: 20px;
+}
+
+@media(min-width:480px) and (max-width:768px) {
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .popular{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media(max-width: 480px){
+    .navbar{
+        display : flex;
+        flex-direction: column;
+        gap:10px;
+    }
+    .popular{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+}
+
+/*---------------------------------------------------------------- Hero Section ------------------------*/
+
+.hero{
+    height: 60vh;
+    background-image:url(../assets/hero-cruise.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: #fff;
+    line-height: 2;
+}
+
+.buttonBooknow{
+    background-color: orangered;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    border-radius:6px;
+}
+
+.buttonBooknow  a{
+    font-size:10px;
+}
+
+
+/* --------------------------------------------Discover section--------------- */
+.discover{
+     margin: 50px;
+     
+}
+
+.heading{
+    margin-left: 0.5rem;
+    margin-top: 50px;
+    border-left: 5px solid orange;
+    padding-left: 10px;
+}
+
+.heading p{
+     margin-top:20px;
+     margin-bottom:15px;
+}
+
+.popular{
+    display:flex;
+    align-items:center ;
+  } 
+
+.pills{
+    display:flex;
+    padding: 5px 10px;
+    margin-right: 5px
+} 
+
+.pills > div{
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  background-color: #fff;
+  border: none;
+  color: black;
+  padding: 10px 10px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 5px;
+  border-radius: 50px;
+  text-align: center;
+  gap:10px
+}
+
+.pills img{
+    border-radius: 60%;
+    width: 15px;
+    height: 15px;
+}
+
+
+/*------------------------------------------- discover banner section ---------------------*/
+  .discover_banner{
+    position: relative;
+    margin-top: 20px;
+  }
+
+  .discover_banner img{
+    width: 100%;
+  }
+
+  .discover_banner_text{
+    font-size: 10px;
+    position:absolute;
+    bottom:0%;
+    margin: 25px 12px;
+    color: #fff;
+
+  }
+  /*------------------------------------------- Card section ---------------------*/
+
+ .discover_cards{
+   margin-top:15px;
+   display:grid;
+   /* grid-template-columns: repeat(auto-fit, minmax(20px, 1fr)); */
+   grid-template-columns: repeat(4,1fr);
+   gap:15px;
+   /* padding: 10px; */
+}
+
+.card{
+    position: relative;
+}
+
+.image-container{
+    position: relative;
+    height: 30vh;
+}
+
+.card img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    /* cursor: pointer; */
+}
+
+.cardtext {
+    position: absolute;
+    bottom: 0%;
+    margin:15px;
+    padding: 10px;
+    color: #fff;
+
+}
+
+.cardtext h1, .text p {
+    margin: 0;
+}
+.cardtext h1{
+    font-size:15px;
+}
+
+ @media (max-width: 480px){
+    .discover .heading{
+        border:none;
+        text-align: center;
+    }
+
+    .popular{
+        display:flex;
+        flex-direction: column;
+    }
+    .pills{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .discover_cards{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .discover_banner_text{
+        font-size:8px;
+    }
+
+ }
+
+ @media (min-width: 480px) and (max-width: 768px){
+    .discover .heading{
+        border:none;
+        text-align: center;
+    }
+    .popular{
+        margin:auto;
+        gap:10px;
+    }
+
+    .pills>div span{
+        font-size: 8px;
+        width: 100%;
+    }
+
+    .discover .discover_cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .discover_banner_text{
+        font-size: 12px;
+    }
+ }
+/*----------------------------------------------------contact us---------------------------------------  */
+
+.contact_heading{
+    padding:5px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top:50px;
+    border-bottom: 5px solid orange;
+    width:fit-content;
+}
+
+.contact_info{
+    margin-top:10px;
+    padding: 10px;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+   gap: 20px; 
+   text-align: center;
+}
+.contact_info h4{
+     padding-bottom: 5px;
+}
+.contact_info h4, p{
+    font-family: open sans, Helvetica, Robota, Arial, sans-serif;
+}
+
+#contact_information{
+    border: solid black ;
+    border-width: 1px;
+    margin-left:30px;
+    padding:20px;
+    padding-left: 20px;
+    padding-right:20px;
+   
+}
+
+#hrs_of_operation{
+    border: solid black ;
+    border-width: 1px;
+    padding:20px;
+    padding-left: 50px;
+    padding-right:50px;
+}
+
+@media (max-width: 786px){
+    .contact_info{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:50px;
+    }
+
+}
+
+/*------------------------------------------------footer--------------------------------- */
+
+.footer{
+    margin-top:50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+    text-align:left;
+    background-color:rgb(0, 0, 51);
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:50px;
+}
+
+.footer_headings h3{
+    color: orange;
+    margin-bottom: 10px;
+}
+.footer_headings ul{
+    color:#fff;
+    margin-bottom: 3px;
+    list-style-type: none;
+    font-family: open sans, Helvetica, Robota, Arial, sans-serif;
+}
+
+.footer_followus{
+    margin-top: 20px;
+}
+.social-icons img{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    cursor:pointer;
+}
+
+.footer_rights{
+    color:#fff;
+    text-align: center;
+    background-color:rgb(0, 0, 51);
+    border-top: 1px solid grey;
+    padding-bottom: 30px;
+}
+
+@media (max-width :786px){
+    .footer{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:25px;
+    }
+}
